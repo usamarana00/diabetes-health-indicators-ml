@@ -10,6 +10,9 @@ import numpy as np
 import joblib
 import os
 
+# ── page config MUST be first Streamlit call ──────────────────────────────────
+st.set_page_config(page_title="Diabetes ML Predictor", layout="wide")
+
 # ── load models ───────────────────────────────────────────────────────────────
 MODEL_DIR = os.path.join(os.path.dirname(__file__), '..', 'models')
 
@@ -97,7 +100,6 @@ def input_form():
 
 
 # ── page setup ────────────────────────────────────────────────────────────────
-st.set_page_config(page_title="Diabetes ML Predictor", layout="wide")
 st.title("Diabetes Health Indicators – ML Predictor")
 st.write("Use the sidebar to enter patient information, then select a prediction task below.")
 
